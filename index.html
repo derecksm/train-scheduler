@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container-schedule">
+
+        <div id="tn">
+            <h3 class="background-co">Train Name</h3>
+            <div id="trainName"></div>
+        </div>
+
+        <div id="dest">
+            <h3 class="background-co">Destination</h3>
+            <div id="destination"></div>
+        </div>
+
+        <div id="fq">
+            <h3 class="background-co">Frequency (min)</h3>
+            <div id="frequency"></div>
+        </div>
+
+        <div id="nextT">
+            <h3 class="background-co">Next Arrival</h3>
+            <div id="nextTime"></div>
+        </div>
+
+        <div id="minA">
+            <h3 class="background-co">Minutes Away</h3>
+            <div id="minutesAwy"></div>
+        </div>
+
+    </div>
+    <div id="addTrain">
+        <form action="">
+            <p>
+                <label for="name">Train Name</label>
+                <input type="text" name="name" id="name">
+            </p>
+            <p>
+                <label for="desti">Destination</label>
+                <input type="text" name="desti" id="desti">
+            </p>
+            <p>
+                <label for="time">First Train Time (HH:mm -military time)</label>
+                <input type="time" name="time" id="time">
+            </p>
+            <p>
+                <label for="minutes">Frequency (min)</label>
+                <input type="number" name="minutes" id="minutes">
+            </p>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

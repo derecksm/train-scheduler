@@ -1,0 +1,30 @@
+#container-schedule{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+}
+
+#tn{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#dest{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+#fq{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+#nextT{
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+}
+#minA{
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 1;
+}
+.background-co{
+    background-color: lightblue;
+}
