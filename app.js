@@ -88,21 +88,16 @@ db.collection('users').onSnapshot(({docs}) => {
             //First time and pushing it back to ensure it comes before current time
             let firstTimeconverted = moment(firstTime, 'HH:mm').subtract(1, 'year')
             let currentTime = moment()
-            console.log('the current time:' + moment(currentTime).format('hh:mm'))
             
             //Difference between the times
             let diffTime = moment().diff(moment(firstTimeconverted), 'minutes')
-            console.log('time difference: ' + diffTime)
 
-            //Time apart
+            //Time apart / Time difference
             let timeRemainder = diffTime % tFrequency
-            console.log(timeRemainder)
             let tMinTillTrain = tFrequency - timeRemainder
-            console.log('how many minutes till next train: ' + tMinTillTrain)
 
             //Next train
             let nextTrain = moment().add(tMinTillTrain,'minutes')
-            console.log('train arrival time: ' + moment(nextTrain).format('hh:mm'))
             
             let nextArrivalElem = document.createElement('div')
             nextArrivalElem.innerHTML = `
